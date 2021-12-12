@@ -1,0 +1,6 @@
+
+    
+       <h2 class="text-center"> Metrics of Agent Pid : <span class="text-success">{{pid}}</span> </h2>
+        <div *ngFor="let Metric of Metrics, let i = index "> 
+          <app-metric [lineChartColors]="colors[i]"[type]="Metric.type" [Uuid]="Uuid"></app-metric>
+        </div>

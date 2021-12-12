@@ -1,0 +1,50 @@
+
+
+<header class="header">
+  <div class="header-container">
+    <img src="http://localhost:4200/assets/platziverse.png" width="185" height="38" alt="PlatziVerse">
+  </div>
+</header>
+
+<button class="btn btn-danger"
+        (click)="action()">
+  MetricsUuidType
+</button>
+
+<br>
+<br>
+
+<div *ngIf="condicion == true">
+<app-metric></app-metric>
+</div>
+
+<!-- todos agentes connectdos  -->
+<h2>Agentes Connected {{agentesConnectados.length}}</h2>
+
+<div class="card mt-2" *ngFor="let agente of agentesConnectados; let i = index ">
+    <!-- <h2>{{agentesConnectados[i].uuid}}</h2> -->
+  <div class="card-header">
+   <h3> Myapp({{agentesConnectados[i].pid}})</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">({{agentesConnectados[i].hostname}})</h5>
+    <h3 class="card-text">Connected : <span class="text-success">True</span>  </h3>
+
+    <a [routerLink]="['/detail', agentesConnectados[i].uuid ]" class="btn btn-danger"
+               
+    >
+        Ver Metrics
+  </a>
+
+  
+    <!-- <div *ngIf="condiciondos == i">
+        <div *ngFor="let Metric of Metrics[i], let s = index "> -->
+          <!-- <app-metric [lineChartColors]="colors[s]"[type]="Metric.type" [Uuid]="agentesConnectados[i].uuid"></app-metric> -->
+          <!-- [Uuid]="AgentUuid" [type]="Metric.type" -->
+        <!-- </div>
+    </div>  -->
+   
+   
+  </div>
+</div>
+

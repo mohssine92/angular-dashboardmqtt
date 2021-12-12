@@ -1,0 +1,18 @@
+
+<div class="card mt-5 mb-2 ">
+    <div class="card-body">
+        <p class="text-lowercase">myapp({{agent.pid}})</p>
+        <p class="text-lowercase">{{agent.hostname}}</p>
+    </div>
+  </div>
+
+<div *ngFor="let type of metricsType; let i = index ">
+
+    <!-- <h1>{{colors[i]}}</h1> -->
+      <!-- <h1>{{type}}</h1>   agentService.MetricsType[i]  -->
+     <!-- <h1>{{i}}</h1> -->
+   
+   <!-- <app-metric [lineChartColors]="colors[i]" [Uuid]="AgentUuid" [type]="type"> </app-metric>   -->
+   <app-metrics  [lineChartColors]="colors[i]"  [Uuid]="Uuid" [type]="type" > </app-metrics>
+
+ </div>

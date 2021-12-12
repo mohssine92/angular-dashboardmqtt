@@ -1,0 +1,33 @@
+
+<h1>Usuario:
+  <small> {{ wsService.usuario?.nombre }} </small>
+</h1>
+
+
+<button class="btn btn-danger"
+        (click)="salir()">
+  Salir
+</button>
+
+<button class="btn btn-danger"
+        (click)="action()">
+  init/destroy
+</button>
+
+<hr>
+
+
+<div class="row">
+
+  <div class="col-6">
+    <app-lista-usuarios></app-lista-usuarios>
+  </div>
+
+  <div  class="col-6" *ngIf="condicion == true">
+    <app-chat></app-chat>
+  </div>
+
+
+</div>
+
+
